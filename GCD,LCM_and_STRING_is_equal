@@ -1,0 +1,27 @@
+import math
+
+def compare_strings(str1, str2):
+    if str1 == str2:
+        print("The strings are equal.")
+    else:
+        print("The strings are not equal.")
+
+def compute_gcd_lcm(a, b):
+    gcd = math.gcd(a, b)
+    lcm = abs(a * b) // gcd if a and b else 0  # Avoid division by zero
+    print(f"GCD of {a} and {b} is: {gcd}")
+    print(f"LCM of {a} and {b} is: {lcm}")
+
+# Example usage
+# String comparison
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+compare_strings(s1, s2)
+
+# GCD and LCM calculation
+try:
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    compute_gcd_lcm(num1, num2)
+except ValueError:
+    print("Please enter valid integers.")
