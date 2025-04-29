@@ -1,0 +1,9 @@
+def count_character_frequency(filename):
+    frequency = {}
+
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            for line in file:
+                for char in line:
+                    if char in frequency:
+                        frequency[char]
