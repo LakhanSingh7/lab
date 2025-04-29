@@ -1,0 +1,11 @@
+def print_reversed_lines(filename):
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            for line in file:
+                reversed_line = line.rstrip('\n')[::-1]
+                print(reversed_line)
+    except FileNotFoundError:
+        print(f"Error: File '{filename}' not found.")
+
+# Example usage
+filename
